@@ -1,0 +1,27 @@
+import java.util.Random;
+import java.util.Scanner; //Bring in the utilities from Java database
+
+public class UserNames {
+
+	public static void main(String[] args) {
+
+		Random gen = new Random(); 
+		Scanner scn = new Scanner(System.in); //Bringing in the Scanner and Random object
+		
+		String firstName, lastName, userId; //Bring in my variables
+		
+		System.out.println("Please enter your first and last name and press enter: "); //Grab the user's input.
+			firstName = scn.next();
+			lastName = scn.next();
+			
+		System.out.println("Alright, your name is : "+firstName+" " +lastName+". "
+				+ "Now let's get you a username."); //Repeat back the info.
+		
+		int numberGen = 9 + gen.nextInt(99); //Create the 10-99 random number specification.
+		
+		userId=firstName.substring(0,4)+lastName.substring(0,1)+numberGen; //Assigns the userID string info.
+		
+		System.out.println ("We have worked up a great user ID for you. It's "+userId+". Enjoy!");
+	}
+
+}
