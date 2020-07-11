@@ -1,0 +1,35 @@
+import java.text.DecimalFormat; //for the specific decimal value.
+import java.util.*; //Import java utilities for this exercise.
+
+public class DistCalc {
+	
+	/*-----------------------------------------------------
+
+	 	A program that runs the distance formula.
+
+	-----------------------------------------------------*/
+	public static void main(String[] args) {
+		
+		double dist, x1, x2, y1, y2; //Forming my double variables.
+		
+		Scanner scn = new Scanner(System.in); //Input scanner.
+		
+		System.out.println("Enter your first X,Y values to compute : "); //Prompt for the (x1,y1)
+			x1 = scn.nextInt();
+			y1 = scn.nextInt(); 
+		 
+		System.out.println("Enter your second X,Y values to compute: "); //Prompt for the (x2,y2)
+			x2 = scn.nextInt();
+			y2 = scn.nextInt();
+			
+		dist = Math.sqrt(Math.pow(x2 - x1,2) + Math.pow(y2 - y1,2)); //Formula for distance entered
+		
+		DecimalFormat deci = new DecimalFormat(); //Decimal input from the import.
+		deci.setMaximumFractionDigits(3); //3 decimal points.
+		
+		System.out.println("Well, look at that, the distance between the two numbers is : "+deci.format(dist)+" "
+				+ "(to 3 decimal places.)");
+		
+	}
+
+}
