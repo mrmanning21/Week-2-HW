@@ -19,7 +19,7 @@ public class UserNames {
 		
 		int numberGen = 9 + gen.nextInt(99); //Create the 10-99 random number specification.
 		
-		userId=firstName.substring(0,4)+lastName.substring(0,1)+numberGen; //Assigns the userID string info.
+		userId=lastName.substring(0,4)+firstName.substring(0,1)+numberGen; //Assigns the userID string info.
 		
 		System.out.println ("We have worked up a great user ID for you. It's "+userId+". Enjoy!");
 	}
