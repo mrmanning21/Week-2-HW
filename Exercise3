@@ -17,7 +17,7 @@ public class UserNames {
 		System.out.println("Alright, your name is : "+firstName+" " +lastName+". "
 				+ "Now let's get you a username."); //Repeat back the info.
 		
-		int numberGen = 9 + gen.nextInt(99); //Create the 10-99 random number specification.
+		int numberGen = 10 + gen.nextInt(89); //Create the 10-99 random number specification.
 		
 		userId=lastName.substring(0,4)+firstName.substring(0,1)+numberGen; //Assigns the userID string info.
 		
